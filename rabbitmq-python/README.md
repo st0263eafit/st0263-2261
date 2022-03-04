@@ -25,7 +25,7 @@ Nota: recuerde abrir los puertos 5672 y 15672 en el Security Group de la máquin
 
 # ejecutar programas python:
 
-    COLAS: Cualquiera puede enviar, pero solo uno de los consumidores puede recibir
+## COLAS: Cualquiera puede enviar, pero solo uno de los consumidores puede recibir
 
     //console1:
     python3 consumerQueue.py 
@@ -36,7 +36,7 @@ Nota: recuerde abrir los puertos 5672 y 15672 en el Security Group de la máquin
     //console3: (ejecuta varias veces este comando, y notará que las recepciones por los consumidores es alternada)
     python3 producerQueue.py
 
-    TOPICOS: Cualquiera puede enviar, todos los consumidores de un tópico reciben.
+## TOPICOS: Cualquiera puede enviar, todos los consumidores de un tópico reciben.
 
     //console1:
     python3 receive_logs_topic.py key1
