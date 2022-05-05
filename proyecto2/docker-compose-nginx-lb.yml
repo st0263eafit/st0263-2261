@@ -4,6 +4,6 @@ services:
     container_name: nginx
     image: nginx
     volumes:
-    - ./nginx-proxyinv-local.conf:/etc/nginx/nginx.conf:ro
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
     - 80:80  
