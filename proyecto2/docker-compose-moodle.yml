@@ -13,8 +13,12 @@ services:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:
+#volumenes locales:    
       - 'moodle_data:/bitnami/moodle'
       - 'moodledata_data:/bitnami/moodledata'
+#volumenes remotos en NFS Server    
+#      - '/shares/moodle/moodle_data:/bitnami/moodle'
+#      - '/shares/moodle/moodledata_data:/bitnami/moodledata'  
 volumes:
   moodle_data:
     driver: local
