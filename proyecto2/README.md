@@ -20,12 +20,12 @@ Tenemos 5 máquinas para el proyecto:
 
 ## Opción1: en nginx-proxyinverso -> 192.168.10.x1
 
-1.Instalar docker y docker compose
-2.close el repo de la materia:
+### 1.Instalar docker y docker compose
+### 2.close el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-3.
+### 3.
     mkdir $HOME/nginx-proxyinverso
     cp docker-compose-nginx-proxyinverso.yml $HOME/nginx-proxyinverso/docker-compose.yml
     cp nginx-proxyinverso.conf $HOME/nginx-proxyinverso/nginx.conf
@@ -38,13 +38,13 @@ Tenemos 5 máquinas para el proyecto:
 
 ## Opción2: en nginx-lb -> 192.168.10.x1
 
-1.Instalar docker y docker compose
-2.close el repo de la materia:
+### 1.Instalar docker y docker compose
+### 2.close el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
 
-3. instalar nfs-client nativo en Linux:
+### 3. instalar nfs-client nativo en Linux:
 ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
     sudo apt install nfs-common
@@ -55,7 +55,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     # agregar esta linea al final del archivo /etc/fstab
     192.168.10.x5:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
 
-4.  
+### 4.  
     mkdir $HOME/nginx-lb
     cp docker-compose-nginx-lb.yml $HOME/nginx-lb/docker-compose.yml
     cp nginx-lb.conf $HOME/nginx-lb/nginx.conf
@@ -67,12 +67,12 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     docker-compose down
 
 ## en moodle1 -> 192.168.10.x2
-1.Instalar docker y docker compose
-2.close el repo de la materia:
+### 1.Instalar docker y docker compose
+### 2.close el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-3.
+### 3.
     mkdir $HOME/moodle
     cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
     cd $HOME/moodle
@@ -83,12 +83,12 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     docker-compose down
 
 ## en moodle2 -> 192.168.10.x3
-1.Instalar docker y docker compose
-2.close el repo de la materia:
+### 1.Instalar docker y docker compose
+### 2.close el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-3.
+### 3.
     mkdir $HOME/moodle
     cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
     cd $HOME/moodle
@@ -99,12 +99,12 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     docker-compose down
 
 ## en moodle2 -> 192.168.10.x3
-1.Instalar docker y docker compose
-2.close el repo de la materia:
+### 1.Instalar docker y docker compose
+### 2.close el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-3.
+### 3.
     mkdir $HOME/moodle
     cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
     cd $HOME/moodle
@@ -116,12 +116,12 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
 ## en mariadb -> 192.168.10.x4
 
-1.Instalar docker y docker compose
-2.close el repo de la materia:
+### 1.Instalar docker y docker compose
+### 2.close el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-3.
+### 3.
     mkdir $HOME/mariadb
     cp docker-compose-mariadb.yml $HOME/mariadb/docker-compose.yml
     cd $HOME/mariadb
@@ -133,13 +133,13 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
 ## en nfs-server -> 192.168.10.x5
 
-1.Instalar docker y docker compose
-2.close el repo de la materia:
+### 1.Instalar docker y docker compose
+### 2.close el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
 
-3. instalar nfs-server nativo en el sistema operativo:
+### 3. instalar nfs-server nativo en el sistema operativo:
 
 ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
