@@ -16,7 +16,7 @@ Tenemos 5 máquinas para el proyecto:
 
     nfs-server -> 192.168.10.x5
 
-# para pruebas, puede configurar el nginx como proxy inverso (opción1) o irse directamente ejecutar el balanceador con nginx-lb:
+# LOAD BALANCER: para pruebas, puede configurar el nginx como proxy inverso (opción1) o irse directamente ejecutar el balanceador con nginx-lb:
 
 ## Opción1: en nginx-proxyinverso -> 192.168.10.x1
 
@@ -43,19 +43,7 @@ Tenemos 5 máquinas para el proyecto:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-
-### 3. instalar nfs-client nativo en Linux:
-ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
-
-    sudo apt install nfs-common
-    sudo mkdir -f /shares/moodle
-    # conectarse de forma manual al nfs-server:
-    sudo mount -t nfs4 192.168.10.x5:/srv/nfs/moodle /shares/moodle
-    # configurarlo para cada que baje y suba la máquina, se conecte al nfs-server
-    # agregar esta linea al final del archivo /etc/fstab
-    192.168.10.x5:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
-
-### 4.  
+### 3.  
     mkdir $HOME/nginx-lb
     cp docker-compose-nginx-lb.yml $HOME/nginx-lb/docker-compose.yml
     cp nginx-lb.conf $HOME/nginx-lb/nginx.conf
@@ -66,13 +54,23 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     # bajarlo
     docker-compose down
 
-## en moodle1 -> 192.168.10.x2
+# en moodle1 -> 192.168.10.x2
 ### 1.Instalar docker y docker compose
 ### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-### 3.
+### 3. instalar nfs-client nativo en Linux:
+ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
+
+    sudo apt install nfs-common
+    sudo mkdir -p /shares/moodle
+    # conectarse de forma manual al nfs-server:
+    sudo mount -t nfs4 192.168.10.x5:/srv/nfs/moodle /shares/moodle
+    # configurarlo para cada que baje y suba la máquina, se conecte al nfs-server
+    # agregar esta linea al final del archivo /etc/fstab
+    192.168.10.x5:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
+### 4.
     mkdir $HOME/moodle
     cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
     cd $HOME/moodle
@@ -82,13 +80,23 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     # bajarlo
     docker-compose down
 
-## en moodle2 -> 192.168.10.x3
+# en moodle2 -> 192.168.10.x3
 ### 1.Instalar docker y docker compose
 ### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-### 3.
+### 3. instalar nfs-client nativo en Linux:
+ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
+
+    sudo apt install nfs-common
+    sudo mkdir -p /shares/moodle
+    # conectarse de forma manual al nfs-server:
+    sudo mount -t nfs4 192.168.10.x5:/srv/nfs/moodle /shares/moodle
+    # configurarlo para cada que baje y suba la máquina, se conecte al nfs-server
+    # agregar esta linea al final del archivo /etc/fstab
+    192.168.10.x5:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
+### 4.
     mkdir $HOME/moodle
     cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
     cd $HOME/moodle
@@ -98,23 +106,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     # bajarlo
     docker-compose down
 
-## en moodle2 -> 192.168.10.x3
-### 1.Instalar docker y docker compose
-### 2.clone el repo de la materia:
-    cd $HOME
-    git clone https://github.com/st0263eafit/st0263-2261.git
-    cd st0263-2261/proyecto2
-### 3.
-    mkdir $HOME/moodle
-    cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
-    cd $HOME/moodle
-    # actualice las IP's en los archivos docker-compose.yml
-    # subir
-    docker-compose up -d
-    # bajarlo
-    docker-compose down
-
-## en mariadb -> 192.168.10.x4
+# en mariadb -> 192.168.10.x4
 
 ### 1.Instalar docker y docker compose
 ### 2.clone el repo de la materia:
@@ -140,11 +132,10 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     cd st0263-2261/proyecto2
 
 ### 3. instalar nfs-server nativo en el sistema operativo:
-
 ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
     sudo apt install nfs-kernel-server
-    sudo mkdir -f /srv/nfs/moodle
+    sudo mkdir -p /srv/nfs/moodle
 
     # agregar esta linea al final del archivo /etc/exports
     /srv/nfs/moodle 192.168.10.0/24(rw,sync,no_subtree_check)
