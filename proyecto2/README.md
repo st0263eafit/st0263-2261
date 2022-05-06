@@ -43,7 +43,19 @@ Tenemos 5 máquinas para el proyecto:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
-3.
+
+3. instalar nfs-client nativo en Linux:
+ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
+
+    sudo apt install nfs-common
+    sudo mkdir -f /shares/moodle
+    # conectarse de forma manual al nfs-server:
+    sudo mount -t nfs4 192.168.10.x5:/srv/nfs/moodle /shares/moodle
+    # configurarlo para cada que baje y suba la máquina, se conecte al nfs-server
+    # agregar esta linea al final del archivo /etc/fstab
+    192.168.10.x5:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
+
+4.  
     mkdir $HOME/nginx-lb
     cp docker-compose-nginx-lb.yml $HOME/nginx-lb/docker-compose.yml
     cp nginx-lb.conf $HOME/nginx-lb/nginx.conf
@@ -126,8 +138,15 @@ Tenemos 5 máquinas para el proyecto:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
+
 3. instalar nfs-server nativo en el sistema operativo:
 
-ref: 
+ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
-    
+    sudo apt install nfs-kernel-server
+    sudo mkdir -f /srv/nfs/moodle
+
+    # agregar esta linea al final del archivo /etc/exports
+    /srv/nfs/moodle 192.168.10.0/24(rw,sync,no_subtree_check)
+
+    sudo systemctl restart nfs-kernel-server
