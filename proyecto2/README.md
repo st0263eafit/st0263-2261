@@ -21,7 +21,7 @@ Tenemos 5 máquinas para el proyecto:
 ## Opción1: en nginx-proxyinverso -> 192.168.10.x1
 
 ### 1.Instalar docker y docker compose
-### 2.close el repo de la materia:
+### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
@@ -39,7 +39,7 @@ Tenemos 5 máquinas para el proyecto:
 ## Opción2: en nginx-lb -> 192.168.10.x1
 
 ### 1.Instalar docker y docker compose
-### 2.close el repo de la materia:
+### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
@@ -68,7 +68,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
 ## en moodle1 -> 192.168.10.x2
 ### 1.Instalar docker y docker compose
-### 2.close el repo de la materia:
+### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
@@ -84,7 +84,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
 ## en moodle2 -> 192.168.10.x3
 ### 1.Instalar docker y docker compose
-### 2.close el repo de la materia:
+### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
@@ -100,7 +100,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
 ## en moodle2 -> 192.168.10.x3
 ### 1.Instalar docker y docker compose
-### 2.close el repo de la materia:
+### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
@@ -117,7 +117,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 ## en mariadb -> 192.168.10.x4
 
 ### 1.Instalar docker y docker compose
-### 2.close el repo de la materia:
+### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
@@ -134,7 +134,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 ## en nfs-server -> 192.168.10.x5
 
 ### 1.Instalar docker y docker compose
-### 2.close el repo de la materia:
+### 2.clone el repo de la materia:
     cd $HOME
     git clone https://github.com/st0263eafit/st0263-2261.git
     cd st0263-2261/proyecto2
