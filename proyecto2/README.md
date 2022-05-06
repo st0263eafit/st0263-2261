@@ -141,6 +141,6 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
 
     # agregar esta linea al final del archivo /etc/exports
     sudo vim /etc/exports
-    /srv/nfs/moodle 192.168.10.0/24(rw,sync,no_subtree_check)
+    /srv/nfs/moodle 192.168.10.0/24(rw,sync,no_root_squash)
 
     sudo systemctl restart nfs-kernel-server
