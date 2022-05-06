@@ -69,6 +69,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     sudo mount -t nfs4 192.168.10.x5:/srv/nfs/moodle /shares/moodle
     # configurarlo para cada que baje y suba la máquina, se conecte al nfs-server
     # agregar esta linea al final del archivo /etc/fstab
+    sudo vim /etc/fstab
     192.168.10.x5:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
 ### 4.
     mkdir $HOME/moodle
@@ -95,6 +96,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     sudo mount -t nfs4 192.168.10.x5:/srv/nfs/moodle /shares/moodle
     # configurarlo para cada que baje y suba la máquina, se conecte al nfs-server
     # agregar esta linea al final del archivo /etc/fstab
+    sudo vim /etc/fstab
     192.168.10.x5:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
 ### 4.
     mkdir $HOME/moodle
@@ -138,6 +140,7 @@ ref: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster
     sudo mkdir -p /srv/nfs/moodle
 
     # agregar esta linea al final del archivo /etc/exports
+    sudo vim /etc/exports
     /srv/nfs/moodle 192.168.10.0/24(rw,sync,no_subtree_check)
 
     sudo systemctl restart nfs-kernel-server
