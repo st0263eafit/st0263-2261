@@ -1,0 +1,23 @@
+ST0263 TÓPICOS ESPECIALES EN TELEMÁTICA, 2022-1
+
+LAB2: Wordcount en Apache Spark EN AWS EMR 6.3.1
+
+Parte 1:
+
+1. ejecutar el wordcount por linea de comando 'pyspark' INTERACTIVO en EMR con datos en HDFS vía ssh en el nodo master.
+
+2. ejecutar el wordcount por linea de comando 'pyspark' INTERACTIVO en EMR con datos en S3 (tanto de entrada como de salida)  vía ssh en el nodo master.
+
+3. ejecutar el wordcount en JupyterHub Notebooks EMR con datos en S3 (tanto datos de entrada como de salida) usando un clúster EMR.
+
+Parte2:
+
+Replique, ejecute y ENTIENDA el notebook: Data_processing_using_PySpark.ipynb con los datos respectivos.
+ejecutelo en AWS EMR.
+
+Github actualizado en:
+
+https://github.com/st0263eafit/st0263-2261/tree/main/bigdata/03-spark
+
+https://github.com/st0263eafit/st0263-2261.git
+

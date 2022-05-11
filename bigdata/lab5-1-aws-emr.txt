@@ -1,0 +1,26 @@
+ST0263 TÓPICOS ESPECIALES EN TELEMÁTICA, 2022-1
+
+Requisito: CADA ESTUDIANTE, EN SU REPOSITORIO GITHUB PARA LA MATERIA, 
+DEBERÁ DOCUMENTAR Y ADJUNTAR TODAS LAS EVIDENCIAS DE LA REALIZACIÓN DE LOS LABORATORIOS DE BIG DATA.
+
+CADA ALUMNO, DEBERÁ ENVIAR EXPLICITAMENTE AL PROFESOR POR INTERACTIVA VIRTUAL, LA URL DEL REPOSITORIO Y DIRECTORIO
+DONDE TRABAJARÁ TODOS LOS LABS.
+
+LAB 5-1: Crear un Cluster AWS EMR en Amazon para trabajar todos los demás laboratorios.
+
+1. fecha máx de entrega: <fecha>.
+
+2. trabajo individual, cada estudiante deberá responder por estas actividades.
+
+3. seguir los lineamientos del github:
+
+https://github.com/st0263eafit/st0263-2261/tree/main/bigdata
+
+HACER LAS ACTIVIDADES PROPUESTAS EN LOS VIDEOS:
+
+* https://www.youtube.com/watch?v=MyXSwxN5Zdk
+* https://www.youtube.com/watch?v=3sao-qJG34Y
+
+4. Documentará la creación de un clúster EMR (ver videos previamente enviados), activará HUE, recuerden que deben crear un user 'hadoop' con la clave que gusten.
+
+también se deben conectar vía shell (ssh) al nodo master del clúster EMR, donde realizará las actividades de HDFS CLI
